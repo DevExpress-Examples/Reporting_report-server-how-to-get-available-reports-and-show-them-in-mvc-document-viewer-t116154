@@ -1,0 +1,20 @@
+﻿ul#menu li {
+    display: inline;
+    list-style: none;
+}
+
+    ul#menu li a {
+        padding: 10px 10px;
+        background-color: #e8eef4;
+        color: #034af3;
+    }
+
+#menucontainer {
+    clear: both;
+    float: left;
+}
+
+#main {
+    clear: both;
+    padding: 10px 10px 10px 10px;
+}

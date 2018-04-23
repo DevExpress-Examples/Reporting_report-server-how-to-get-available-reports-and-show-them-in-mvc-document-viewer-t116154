@@ -1,0 +1,11 @@
+﻿@model IEnumerable<ReportModel>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div>
+        @foreach(ReportModel reportInfo in Model) { 
+            @Html.ActionLink(reportInfo.ReportName, "DocumentViewer", reportInfo);
+            <br />
+        }
+        <br />
+    </div>

@@ -1,0 +1,10 @@
+﻿@model ReportModel
+@Html.DevExpress().DocumentViewer(
+    settings => {
+        settings.Name = "DocumentViewer";
+        settings.SettingsRemoteSource.AuthenticationType = DevExpress.ReportServer.Printing.AuthenticationType.Windows;
+        settings.SettingsRemoteSource.ReportId = Model.ReportID;
+        settings.SettingsRemoteSource.ServerUri = "http://localhost:83/";
+        settings.CallbackRouteValues = new { Controller = "DocumentViewer", Action = "DocumentViewerPartial", ReportID = Model.ReportID };
+        settings.ExportRouteValues = new { Controller = "DocumentViewer", Action = "DocumentViewerExportTo", ReportID = Model.ReportID };
+    }).GetHtml()
